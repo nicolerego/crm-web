@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CRM APP</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/style.css"> -->
+</head>
+
+<body>
+	<header>
+		<a href="/">
+			<h1>Welcome to <%= @crm_app_name %> </h1>
+		</a>
+		<nav>
+			<p>Menu</p>
+			<ul>
+		  		<li>
+		  			<a href="/contacts">View all contacts</a>
+		  		</li>
+		  		<li>
+		  		 	<a href="/contacts/new">Add a contact</a>
+		  		</li>
+		  		<li>
+		  		 	<a href="#">Modify a Contact</a>
+		  		</li>
+		  		<li>
+		  		 	<a href="#">Display a Contact</a>
+		  		</li>
+		  		<li>
+		  		 	<a href="#">Display by Attribute</a>
+		  		</li>
+		  		<li>
+		  		 	<a href="#">Delete a Contact</a>
+		  		</li>
+			</ul>
+		</nav>
+	</header>
+    <%= yield %>
+    <footer>
+    	<p>&#64; MY CRM</p>
+    </footer>
+</body>
+</html>
+
