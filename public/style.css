@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+/*================ GERNERAL STYLING*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	width:80%;
+	margin: 0 auto;
+}
+
+h1 { 
+	color:#007aff; 
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h2 { 
+	font-size:110%;
+	text-align: center;
+	margin-top:40px;
+	margin-bottom: 20px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h2 span {
+  display: inline-block;
+  position: relative;  
+}
+
+h2 span:before,
+h2 span:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  top: 11px;
+  width: 80%;
+}
+
+h2 span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+h2 span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+a {
+	text-decoration: none;
+	color:#222222;
+}
+
+ul {	
+	list-style-type: none;
+	padding-left:0px;
+}
+
+/* HEADER */
+
+header p { text-transform: uppercase; font-weight: 400; }
+
+/* NAV */
+nav ul li a { font-size: 11pt;}
+nav li a:hover {color:#7e7e7e;}
+nav ul li {line-height: 1.5;}
+
+/* FOOTER */
+
+footer {
+	text-align:center;
+	font-size:10pt;
+}
+
+/*================ NEW CONTACT STYLING */
+ 
+ /* FORM */
+
+label {width:100%;}
+
+input {
+	width:98%; 
+	margin-bottom:20px;
+}
+
+form {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.flatButton {
+  margin-top:20px;
+  position: relative;
+  vertical-align: top;
+  width:100%;
+  height: 30px;
+  padding: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #007aff; 
+  border: 0;
+  border-bottom: 2px solid #006ee6;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #006ee6;
+  box-shadow: inset 0 -2px #006ee6;
+}
+
+.flatButton:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*================ VIEW CONTACTS STYLING */
+
+.allContacts span {font-weight: bold;}
+
+
+
+
+
+
+
