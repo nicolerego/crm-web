@@ -1,14 +1,14 @@
 <section class="newContacts">
 	<h2><span>Create a New Contact</span></h2>
 	<form action="/contacts" method="post">
-		<label>First Name:</label>
-		<input type="text" name="first_name">
-		<label>Last Name:</label>
-		<input type="text" name="last_name">
-		<label>Email:</label>
-		<input type="text" name="email">
-		<label>Note:</label>
-		<input type="text" name="note">
-		<input class="flatButton" type="submit" name="Submit">	
+		<label for="firstname">First Name:</label>
+		<input id ="firstname" type="text" name="first_name" placeholder="John">
+		<label for="lastname">Last Name:</label>
+		<input id="lastname"type="text" name="last_name" placeholder="Smith">
+		<label for="email">Email:</label>
+		<input id="email" type="text" name="email" placeholder="JohnSmith@live.com">
+		<label for="note">Note:</label>
+		<input id="note" type="text" name="note" placeholder="Student at Bitmaker Labs">
+		<input class="flatButton" type="submit" name="Submit" value="Add Contact">	
 	</form>
 </section>
