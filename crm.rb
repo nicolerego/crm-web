@@ -38,6 +38,8 @@ post '/contacts' do
   redirect to('/contacts')
 end
 
+# MODIFY CONTACT
+
 get "/contacts/:id/edit" do 
 	@contact = $rolodex.find(params[:id].to_i)
 	if @contact
@@ -60,3 +62,16 @@ put "/contacts/:id" do
     raise Sinatra::NotFound
   end
 end
+
+# DELETE CONTACT
+
+delete "/contacts/:id" do
+  @contact = $rolodex.find(params[:id].to_i)
+  if @contact
+    $rolodex.remove_contact(@contact)
+    redirect to("/contacts")
+  else
+    raise Sinatra::NotFound
+  end
+end
+
