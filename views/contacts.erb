@@ -1,9 +1,10 @@
 <section class="allContacts">
-	<h2><span>All Contacts</span></h2>
+	<h2><span>Check out all your contacts!</span></h2>
 	<ul>
 		<% $rolodex.contacts.each do |contact| %>
 	 	<li>
-	 		<a href="/contacts/<%= contact.id %>"><span>Name:</span> <%= contact.first_name %> <%= contact.last_name %> </a><span>Email:</span> <%= contact.email %> <span>Note:</span> <%= contact.note %>
+	 		<img class="get_started_icon" src="../User-Profile-128.png">
+	 		<a href="/contacts/<%= contact.id %>"><span>Name:</span> <%= contact.first_name %> <%= contact.last_name %> </a></br><span>Email:</span> <%= contact.email %> </br><span>Note:</span> <%= contact.note %>
 	 	</li>
 	 	<% end %>
 		

@@ -6,14 +6,19 @@ body {
 	font-weight: 300;
 	width:80%;
 	margin: 0 auto;
+  text-align: center;
+  background: #007aff;
+  color:#fff;
 }
 
 h1 { 
-	color:#007aff; 
+	color:#fff; 
 	margin-top: 40px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
 	text-align: center;
+  font-size:400%;
+  margin-top:80px;
 }
 
 h2 { 
@@ -30,28 +35,9 @@ h2 span {
   position: relative;  
 }
 
-h2 span:before,
-h2 span:after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid black;
-  top: 11px;
-  width: 80%;
-}
-
-h2 span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-
-h2 span:after {
-  left: 100%;
-  margin-left: 15px;
-}
-
 a {
 	text-decoration: none;
-	color:#222222;
+	color:#fff;
 }
 
 ul {	
@@ -59,31 +45,65 @@ ul {
 	padding-left:0px;
 }
 
+h3, h4 {
+  text-align: center;
+}
+
+header h4 {
+  margin-top: -30px;
+  font-size:120%;
+  font-weight: 300;
+}
+
 /* HEADER */
 
-header p { text-transform: uppercase; font-weight: 400; }
+header p { 
+  text-transform: uppercase; 
+  font-weight: 400; 
+}
 
 /* NAV */
-nav ul li a { font-size: 11pt;}
-nav li a:hover {color:#7e7e7e;}
-nav ul li {line-height: 1.5;}
+nav {
+  height:100%;
+  overflow:auto;
+  width:300px;
+  margin:0 auto;
+  margin-bottom:100px;
+}
+
+nav ul li a { font-size: 11pt; }
+nav li a:hover { opacity:0.8; }
+nav ul li { line-height: 1.5; }
+
+nav ul li {
+  float:left; 
+  margin-right:20px;
+  padding:7px 10px;
+  border:solid 1px white;
+}
 
 /* FOOTER */
 
 footer {
 	text-align:center;
 	font-size:10pt;
+  margin-top:80px;
+  margin-bottom:20px;
 }
+
 
 /*================ NEW CONTACT STYLING */
  
- /* FORM */
+ /* FORMS */
 
-label {width:100%;}
+label { width:100%; }
 
 input {
 	width:98%; 
 	margin-bottom:20px;
+  height:20px;
+  margin-top:10px;
+  border:none;
 }
 
 form {
@@ -92,11 +112,13 @@ form {
 	margin: 0 auto;
 }
 
+/* FORM BUTTONS */
+
 .flatButton {
   margin-top:20px;
   position: relative;
   vertical-align: top;
-  width:100%;
+  width:200px;
   height: 30px;
   padding: 0;
   font-size: 14px;
@@ -104,12 +126,12 @@ form {
   color: white;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  background: #007aff; 
+  background: #f1b601; 
   border: 0;
-  border-bottom: 2px solid #006ee6;
+  border-bottom: 2px solid #d5a102;
   cursor: pointer;
-  -webkit-box-shadow: inset 0 -2px #006ee6;
-  box-shadow: inset 0 -2px #006ee6;
+  -webkit-box-shadow: inset 0 -2px #d5a102;
+  box-shadow: inset 0 -2px #d5a102;
 }
 
 .flatButton:active {
@@ -121,11 +143,84 @@ form {
 
 /*================ VIEW CONTACTS STYLING */
 
-.allContacts span {font-weight: bold;}
+.allContacts span { font-weight: 400; }
+.allContacts a:hover { color:#f1b601; }
+
+.allContacts h2 span{
+  margin-bottom:20px; 
+  font-weight: 300;
+}
+
+.allContacts img {
+  float:left; 
+  width:70px;
+  margin-right:10px;
+
+}
+.allContacts ul {
+  height:100%; 
+  overflow:auto; 
+  width:80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.allContacts li { 
+  width:48%; 
+  text-align:left;
+  float:left;
+  margin-right:10px;
+  margin-top: 30px;
+}
+
+/*================ INDEX STYLING */
+
+#get_started h3 {
+  margin-top:80px;
+  margin-bottom: 40px;
+  font-size: 12pt;
+  font-weight: 300;
+}
+
+#get_started img { margin-bottom: 20px; }
+#get_started h4 { font-weight: 300; }
+
+/*================ SHOW CONTACT (SINGLE) STYLING */
+ 
+.showContact h2 { font-size:140%; }
 
 
+/*================ MEDIA QUERIES FOR VIEW ALL CONTACTS*/
 
+@media (max-width: 900px) {
+  .allContacts img {
+    float:left; 
+    width:70px;
+  }
 
+  .allContacts li { 
+    width:75%; 
+    max-width:320px;
+    margin:0 auto;
+    float:none;
+    margin-top: 30px;
+  }
+}
 
+@media (max-width: 530px) {
+  .allContacts img {
+    float:none;
+    width:100%;
+    display: block;
+    margin: 0 auto;
+    width:70px;
+    margin-bottom:10px;
+  }
 
-
+  .allContacts li { 
+    width:80%; 
+    margin:0 auto;
+    margin-top: 30px;
+    text-align: center;
+  }
+}

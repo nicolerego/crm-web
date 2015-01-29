@@ -9,18 +9,19 @@
 <body>
 	<header>
 		<a href="/">
-			<h1>Welcome to <%= @crm_app_name %> </h1>
+			<h1><%= @crm_app_name %> </h1>
 		</a>
+		<h4>A little address book.</h4>
 		<nav>
-			<p>Menu</p>
 			<ul>
-		  		<li>
-		  			<a href="/contacts">View Contacts</a>
+				<li>
+		  		 	<a href="/contacts/new">+ Add a Contact</a>
 		  		</li>
 		  		<li>
-		  		 	<a href="/contacts/new">Add a Contact</a>
+		  			<a href="/contacts">+ View Contacts</a>
 		  		</li>
-		  		<li>
+		  		
+		  		<!-- <li>
 		  		 	<a href="#">Modify a Contact</a>
 		  		</li>
 		  		<li>
@@ -31,13 +32,13 @@
 		  		</li>
 		  		<li>
 		  		 	<a href="#">Delete a Contact</a>
-		  		</li>
+		  		</li> -->
 			</ul>
 		</nav>
 	</header>
     <%= yield %>
     <footer>
-    	<p>&#64; MY CRM</p>
+    	<p>&#64; CRM WEB APP</p>
     </footer>
 </body>
 </html>

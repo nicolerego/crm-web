@@ -1,3 +1,29 @@
-<!-- <h2><span>About</span></h2>
-<p>David Heinemeier Hansson (known to the Ruby community as DHH) is a Danish programmer and the creator of the popular Ruby on Rails web development framework. He is also a partner at the web-based software development firm 37signals. After attracting the attention of Jason Fried by offering him help with PHP coding, Hansson was hired by Fried to build a web-based CRM tool, which ultimately became 37signals' Basecamp software as a service (SaaS) product. To aid the development process, Hansson used the then-obscure Ruby programming language to develop a custom web framework.</p>
- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CRM APP</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+	<header>
+		<a href="/">
+			<h1><%= @crm_app_name %> </h1>
+		</a>
+		<h4>A little address book.</h4>
+	</header>
+	<section id="get_started">
+		<h3> Get Started! </h3>
+		<h4>
+			<a href="/contacts/new">
+				<img class="get_started_icon" src="../User-Profile-128.png"></br>
+				CREATE A CONTACT
+			</a>
+		</h4>
+	</section>
+	<footer>
+    	<p>&#64; MY CRM</p>
+    </footer>
+</body>
+</html>
