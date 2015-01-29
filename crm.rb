@@ -4,8 +4,6 @@ require 'sinatra'
 
 $rolodex= Rolodex.new
 
-$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
-
 get '/' do
 	@crm_app_name = "My CRM"
  	erb :index
