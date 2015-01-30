@@ -1,4 +1,3 @@
-require_relative 'rolodex'
 require 'sinatra'
 require 'data_mapper'
 
@@ -14,20 +13,10 @@ class Contact
   property :email, String
   property :note, String
 
-  # attr_accessor :id, :first_name, :last_name, :email, :note
-
-  # def initialize(first_name, last_name, email, note)
-  #   @first_name = first_name
-  #   @last_name = last_name
-  #   @email = email
-  #   @note = note
-  # end
 end
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
-
-$rolodex= Rolodex.new
 
 get '/' do
 	@crm_app_name = "CRM WEB APP"
@@ -73,7 +62,7 @@ end
 
 get "/contacts/:id/edit" do 
 	@crm_app_name = "CRM WEB APP"
-	@contact = $rolodex.find(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		erb :edit_contact
 	else
@@ -82,12 +71,14 @@ get "/contacts/:id/edit" do
 end 
 
 put "/contacts/:id" do
-  @contact = $rolodex.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
     @contact.first_name = params[:first_name]
     @contact.last_name = params[:last_name]
     @contact.email = params[:email]
     @contact.note = params[:note]
+
+    @contact.save
 
     redirect to("/contacts")
   else
@@ -98,9 +89,9 @@ end
 # DELETE CONTACT
 
 delete "/contacts/:id" do
-  @contact = $rolodex.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
-    $rolodex.remove_contact(@contact)
+    @contact.destroy
     redirect to("/contacts")
   else
     raise Sinatra::NotFound
