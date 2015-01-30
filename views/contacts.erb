@@ -1,7 +1,7 @@
 <section class="allContacts">
 	<h2><span>Check out all your contacts!</span></h2>
 	<ul>
-		<% $rolodex.contacts.each do |contact| %>
+		<% @contacts.each do |contact| %>
 	 	<li>
 	 		<img class="get_started_icon" src="../User-Profile-128.png">
 	 		<a href="/contacts/<%= contact.id %>"><span>Name:</span> <%= contact.first_name %> <%= contact.last_name %> </a></br><span>Email:</span> <%= contact.email %> </br><span>Note:</span> <%= contact.note %>
