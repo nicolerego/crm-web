@@ -48,7 +48,7 @@ end
 
 get "/contacts/:id" do
 	@crm_app_name = "CRM WEB APP"
-  @contact = $rolodex.find(params[:id].to_i)
+  @contact = Contact.get(params[:id].to_i)
   if @contact
   	erb :show_contact
   else
