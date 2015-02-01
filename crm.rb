@@ -45,24 +45,6 @@ get "/contacts/:id" do
   end
 end
 
-get '/search' do
-    @crm_app_name = "CRM WEB APP"
-    erb :search
-end 
- 
-get '/results' do
-    @crm_app_name = "CRM WEB APP"
-    @query = "%" + params[:query] + "%"
-    @results = Contact.all({
-      :conditions => [
-        "first_name LIKE ? OR last_name LIKE ?",
-        @query,
-        @query,
-      ]
-      })
-    erb :results
-end 
-
 post '/contacts' do
   @crm_app_name = "CRM WEB APP"
   
@@ -116,3 +98,24 @@ delete "/contacts/:id" do
   end
 end
 
+# SEARCH CONTACT
+
+get '/search' do
+    @crm_app_name = "CRM WEB APP"
+    erb :search
+end 
+ 
+get '/results' do
+  @crm_app_name = "CRM WEB APP"
+  @results_title = params[:query]
+
+  @query = "%#{params[:query]}%"
+  @results = Contact.all({
+    :conditions => [
+      "first_name LIKE ? OR last_name LIKE ?",
+      @query,
+      @query,
+    ]
+    })
+  erb :results
+end 
